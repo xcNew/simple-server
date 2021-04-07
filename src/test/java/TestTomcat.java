@@ -3,6 +3,7 @@ import cn.hutool.core.util.StrUtil;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import util.MiniBrowser;
 
 public class TestTomcat {
     private static int port = 18080;
@@ -22,7 +23,7 @@ public class TestTomcat {
     @Test
     public void testHelloTomcat() {
         String html = getContentString("/");
-        Assert.assertEquals(html,"Hello DIY Tomcat from how2j.cn");
+        Assert.assertEquals(html,"Hello simple-server from tianxiaochen");
     }
  
     private String getContentString(String uri) {

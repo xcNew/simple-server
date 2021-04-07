@@ -1,4 +1,7 @@
+package http;
+
 import cn.hutool.core.util.StrUtil;
+import util.MiniBrowser;
 
 import java.io.IOException;
 import java.io.InputStream;
