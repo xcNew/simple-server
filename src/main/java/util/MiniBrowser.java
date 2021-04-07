@@ -12,7 +12,9 @@ import java.util.Set;
 public class MiniBrowser {
 
     public static void main(String[] args) throws Exception {
-        String url = "http://static.how2j.cn/diytomcat.html";
+//        String url = "http://static.how2j.cn/diytomcat.html";
+
+        String url = "http://127.0.0.1:18080/a.html";
         String contentString = getContentString(url, false);
         System.out.println(contentString);
         String httpString = getHttpString(url, false);
@@ -78,7 +80,7 @@ public class MiniBrowser {
             if (-1 == port)
                 port = 80;
             InetSocketAddress inetSocketAddress = new InetSocketAddress(u.getHost(), port);
-            client.connect(inetSocketAddress, 1000);
+            client.connect(inetSocketAddress, 100000);
             Map<String, String> requestHeaders = new HashMap<>();
 
             requestHeaders.put("Host", u.getHost() + ":" + port);
